@@ -123,9 +123,9 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div className="lg:col-span-2 lg:border-l lg:border-white-color/10 lg:pl-8">
+          {/* <div className="lg:col-span-2 lg:border-l lg:border-white-color/10 lg:pl-8">
             <FooterLinkList title="Resources" links={resources} />
-          </div>
+          </div> */}
 
           {/* Contact Us */}
           <div className="lg:col-span-3 lg:border-l lg:border-white-color/10 lg:pl-8">
@@ -163,7 +163,7 @@ const Footer = () => {
                   201, Financial District, Ahmedabad - 380060, Gujarat, India
                 </span>
               </li>
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-color/15 text-primary-color">
                   <FaClock className="text-sm" />
                 </span>
@@ -172,7 +172,7 @@ const Footer = () => {
                   <br />
                   Sunday : Closed
                 </span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -180,7 +180,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 flex flex-col gap-6 border-t border-white-color/10 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="font-body-font text-sm text-white-color/70">
-            © 2024 Advait Financial Services. All Rights Reserved.
+            © 2026 Advait Financial Services. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-3">
