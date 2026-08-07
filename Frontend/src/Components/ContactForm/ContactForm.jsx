@@ -441,7 +441,7 @@ const ContactForm = () => {
           </div>
 
           {/* Decorative graphic */}
-          <div className="relative mt-10 hidden h-48 items-end justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100/60 sm:flex">
+          {/* <div className="relative mt-10 hidden h-48 items-end justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100/60 sm:flex">
             <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-orange-200/50 blur-2xl" />
             <FiTrendingUp className="absolute right-8 top-6 h-10 w-10 -rotate-12 text-orange-400" />
             <div className="mb-0 flex items-end gap-3 pb-0">
@@ -453,7 +453,7 @@ const ContactForm = () => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right column - form card */}
