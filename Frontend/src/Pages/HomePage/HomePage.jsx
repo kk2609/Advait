@@ -1,23 +1,26 @@
-import React from "react";
-import Button from "../../Components/Button/Button";
-import { FaDownload } from "react-icons/fa";
-import ContactForm from "../../Components/ContactForm/ContactForm";
-import Disclaimer from "../../Components/Disclaimer/Disclaimer";
-import FAQ from "../../Components/FAQ/FAQ"
+import HomeHeroSection from "./HomeHeroSection/HomeHeroSection";
+import HomeTrustSection from "./HomeTrustSection/HomeTrustSection";
+import HomeAboutSection from "./HomeAboutSection/HomeAboutSection";
+import HomeFounderSection from "./HomeFounderSection/HomeFounderSection";
+import HomeServicesSection from "./HomeServicesSection/HomeServicesSection";
+import HomeJourneySection from "./HomeJourneySection/HomeJourneySection";
+import HomeTestimonialsSection from "./HomeTestimonialsSection/HomeTestimonialsSection";
+import HomeFAQSection from "./HomeFAQSection/HomeFAQSection";
+import HomeCTASection from "./HomeCTASection/HomeCTASection";
 
 const HomePage = () => {
   return (
-    <div>
-      <div>
-        <h1> HomePage</h1>
-        <Button variant="primary" appearance="solid">
-          Book a Consultation
-        </Button>
-        <ContactForm/>
-        <Disclaimer/>
-        <FAQ/>
-      </div>
-    </div>
+    <>
+      <HomeHeroSection />
+      <HomeTrustSection />
+      <HomeAboutSection />
+      <HomeFounderSection />
+      <HomeServicesSection />
+      <HomeJourneySection />
+      <HomeTestimonialsSection />
+      {/* <HomeFAQSection /> */}
+      <HomeCTASection />
+    </>
   );
 };
 
