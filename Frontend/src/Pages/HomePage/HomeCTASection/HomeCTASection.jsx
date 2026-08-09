@@ -27,7 +27,7 @@ const HOME_FAQS = [
 const HomeFAQSection = () => {
   return (
     <section className="bg-secondary-color px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-7xl">
         <h2 className="text-center font-heading-font text-2xl font-bold text-dark-color sm:text-3xl">
           Frequently Asked Questions
         </h2>

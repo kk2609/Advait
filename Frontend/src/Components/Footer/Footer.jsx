@@ -96,7 +96,7 @@ const Footer = () => {
               goals with confidence.
             </p>
 
-            <div className="mt-6 flex items-center gap-3">
+            {/* <div className="mt-6 flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -109,7 +109,7 @@ const Footer = () => {
                   {social.icon}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
