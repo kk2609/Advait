@@ -72,13 +72,13 @@ const HomeCtaSection = () => {
                 Book a Consultation
                 <FaArrowRight className="text-sm" />
               </Link>
-              <div className="flex items-center gap-2 text-gray-color">
+              {/* <div className="flex items-center gap-2 text-gray-color">
                 <FaPhoneAlt className="text-primary-color" />
                 <span className="font-body-font text-sm">
                   Or call us at <br className="hidden sm:inline" />
-                  <span className="font-semibold">+91 98765 43210</span>
+                  <span className="font-semibold">+91 9265474210</span>
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 

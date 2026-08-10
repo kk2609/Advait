@@ -141,7 +141,7 @@
 //                   href="tel:+919876543210"
 //                   className="font-body-font text-sm text-white-color/80 hover:text-primary-color"
 //                 >
-//                   +91 98765 43210
+//                   +91 9265474210
 //                 </a>
 //               </li>
 //               <li className="flex items-center gap-3">
@@ -365,7 +365,7 @@ const Footer = () => {
                   href="tel:+919876543210"
                   className="font-body-font text-sm text-white-color/80 hover:text-primary-color"
                 >
-                  +91 98765 43210
+                  +91 9265474210
                 </a>
               </li>
               <li className="flex items-center gap-3">
