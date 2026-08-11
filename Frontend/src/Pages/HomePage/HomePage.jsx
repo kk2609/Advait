@@ -7,7 +7,7 @@ import HomeJourneySection from "./HomeJourneySection/HomeJourneySection";
 import HomeTestimonialsSection from "./HomeTestimonialsSection/HomeTestimonialsSection";
 
 import HomeCTASection from "./HomeCTASection/HomeCTASection";
-import ContactForm from "../../Components/ContactForm/ContactForm"
+ 
 
 const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage = () => {
       <HomeTestimonialsSection />
       <HomeFounderSection />
       <HomeCTASection />
-      <ContactForm />
+ 
     </>
   );
 };
