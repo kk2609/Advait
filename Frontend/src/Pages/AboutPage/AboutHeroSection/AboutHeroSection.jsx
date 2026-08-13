@@ -47,7 +47,7 @@ import aboutHeroImage from "../../../assets/hero.jpg"; // adjust path
 const STATS = [
   { icon: <FaAward />, value: "8+", label: "Years of Trust" },
   { icon: <FaUserFriends />, value: "100+", label: "Happy Clients" },
-  { icon: <FaLandmark />, value: "₹250Cr+", label: "Assets Guided" },
+  { icon: <FaLandmark />, value: "₹50Cr+", label: "Assets Guided" },
 ];
 
 const AboutHeroSection = () => {

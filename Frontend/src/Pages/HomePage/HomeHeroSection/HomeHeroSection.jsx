@@ -9,9 +9,9 @@ const HomeHeroSection = () => {
       <div className="mx-auto grid max-w-[1600px] items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Left — Content */}
         <div className="text-center lg:text-left">
-          <span className="inline-flex items-center gap-2 rounded-full bg-primary-color/10 px-4 py-1.5 font-body-font text-xs font-bold uppercase tracking-widest text-primary-color">
+          <span className=" items-center gap-2 rounded-full bg-primary-color/10 px-4 py-1.5 font-body-font text-xs font-bold uppercase tracking-widest text-primary-color">
             <span className="h-1.5 w-1.5 rounded-full bg-primary-color" />
-            Plan Today, Prosper Tomorrow
+            Plan Today - Prosper Tomorrow
           </span>
 
           <h1 className="mt-5 font-heading-font text-3xl font-bold leading-tight text-dark-color sm:text-4xl md:text-5xl lg:text-6xl">

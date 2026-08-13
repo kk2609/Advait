@@ -376,7 +376,7 @@ const Footer = () => {
                   href="mailto:hello@advaitfs.com"
                   className="font-body-font text-sm text-white-color/80 hover:text-primary-color"
                 >
-                  hello@advaitfs.com
+                  info@advait.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -384,7 +384,7 @@ const Footer = () => {
                   <FaMapMarkerAlt className="text-sm" />
                 </span>
                 <span className="font-body-font text-sm leading-relaxed text-white-color/80">
-                  201, Financial District, Ahmedabad - 380060, Gujarat, India
+                 Ahmedabad - 380060, Gujarat, India
                 </span>
               </li>
             </ul>

@@ -71,15 +71,13 @@ const cards = [
   },
 ];
 
- 
-
 const AboutStorySection = () => {
   return (
     <section className="bg-white-color px-4 py-14 sm:px-8 sm:py-16 lg:px-14 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-8">
-          {/* Left column */}
-          <div>
+          {/* Left column (becomes right on lg) – Text */}
+          <div className="lg:order-2 lg:border-l lg:border-dashed lg:border-[#E8792B]/40 lg:pl-10">
             <p className="text-sm font-bold tracking-wider text-[#E8792B] sm:text-base">
               OUR STORY
             </p>
@@ -90,21 +88,22 @@ const AboutStorySection = () => {
               Creating Impact.
             </h2>
 
-            <div className="mt-4 h-[3px] w-14  rounded-full bg-[#E8792B]" />
+            <div className="mt-4 h-[3px] w-14 rounded-full bg-[#E8792B]" />
 
             <p className="mt-6 max-w-md text-sm leading-relaxed text-justify text-gray-500 sm:text-[15px]">
-              Advait Financial Services was founded with a simple belief
-              financial guidance should be clear, honest, and centered around the people&apos;s we serve.
-               
+              Advait Financial Services was founded with a simple belief –
+              financial guidance should be clear, honest, and centered around
+              the people we serve.
             </p>
             <p className="mt-4 max-w-md text-sm text-justify leading-relaxed text-gray-500 sm:text-[15px]">
-              Our approach is simple: understand your goals, provide practical guidance, and build long-term
-             relationships that help you move forward with greater financial confidence.
+              Our approach is simple: understand your goals, provide practical
+              guidance, and build long‑term relationships that help you move
+              forward with greater financial confidence.
             </p>
           </div>
 
-          {/* Right column */}
-          <div className="lg:border-l lg:border-dashed lg:border-[#E8792B]/40 lg:pl-10">
+          {/* Right column (becomes left on lg) – Cards */}
+          <div className="lg:order-1">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               {cards.map(({ icon: Icon, title, desc, rotate, heart }) => (
                 <div

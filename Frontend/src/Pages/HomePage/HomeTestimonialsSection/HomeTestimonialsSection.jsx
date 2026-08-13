@@ -5,19 +5,19 @@ const TESTIMONIALS = [
   {
     quote:
       "Advait is regularly transparent and disciplined. My portfolio has never performed better and I finally feel in control of my future.",
-    name: "Rajesh Mehta",
-    role: "Business Owner",
+    name: "Rajesh Mevada",
+    role: "Chartered Accountant",
   },
   {
     quote:
       "We finally have a solid financial plan that keeps us on track and gives real peace of mind about our family's future.",
-    name: "Priya & Nilesh",
-    role: "Working Professionals",
+    name: "Abhishek & Chandni",
+    role: "IT Consultant",
   },
   {
     quote:
       "Professional, knowledgeable and reliable — I've been investing with them for years and highly recommend their guidance.",
-    name: "Amit Patel",
+    name: "Shrikant Patel",
     role: "Entrepreneur",
   },
 ];
