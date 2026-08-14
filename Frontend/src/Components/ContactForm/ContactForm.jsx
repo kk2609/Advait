@@ -404,7 +404,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="w-full bg-[#fdf8f3] px-4 py-10 sm:px-6 lg:px-10 lg:py-16">
+    <section className="w-full bg-secondary-color px-4 py-10 sm:px-6 lg:px-10 lg:py-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
         {/* Left column */}
         <div className="flex flex-col justify-center">
