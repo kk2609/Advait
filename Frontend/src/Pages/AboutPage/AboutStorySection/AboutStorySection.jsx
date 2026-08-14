@@ -77,7 +77,7 @@ const AboutStorySection = () => {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-8">
           {/* Left column (becomes right on lg) – Text */}
-          <div className="lg:order-2 lg:border-l lg:border-dashed lg:border-[#E8792B]/40 lg:pl-10">
+          <div className="lg:order-2  lg:border-dashed lg:border-[#E8792B]/40 lg:pl-10">
             <p className="text-sm font-bold tracking-wider text-[#E8792B] sm:text-base">
               OUR STORY
             </p>

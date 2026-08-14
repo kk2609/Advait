@@ -103,7 +103,7 @@ const AboutPhilosophySection = () => {
             Start. Stay. Grow. Balance.
           </h3>
 
-          <p className="mt-5 max-w-md font-body-font text-sm leading-relaxed text-gray-color sm:text-base lg:text-sm xl:text-base">
+          <p className="mt-5 max-w-md font-body-font text-sm leading-relaxed text-justify text-gray-color sm:text-base lg:text-sm xl:text-base">
             Successful investing isn&apos;t about timing the market.
             It&apos;s about starting with the right approach, staying
             committed to your goals, growing with discipline, and

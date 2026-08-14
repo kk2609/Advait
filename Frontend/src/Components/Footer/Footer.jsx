@@ -405,7 +405,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-body-font text-sm font-medium text-white-color">
+          <div className="flex items-center gap-x-4 gap-y-2 font-body-font text-sm font-medium text-white-color">
             <Link to="/privacy-policy" className="hover:text-primary-color">
               Privacy Policy
             </Link>
@@ -417,9 +417,9 @@ const Footer = () => {
               Terms & Conditions
             </Link>
             <span className="text-white-color/30">|</span>
-            <Link to="/disclaimer" className="hover:text-primary-color">
+            {/* <Link to="/disclaimer" className="hover:text-primary-color">
               Disclaimer
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaPhoneAlt, FaAward, FaUserFriends, FaLandmark } from "react-icons/fa";
-import aboutHeroImage from "../../../assets/hero.jpg"; // adjust path
+import aboutHeroImage from "../../../assets/hero1.png"; // adjust path
 
 const STATS = [
   { icon: <FaAward />, value: "8+", label: "Years of Trust" },

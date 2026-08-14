@@ -8,6 +8,8 @@ import HomeTestimonialsSection from "./HomeTestimonialsSection/HomeTestimonialsS
 
 import HomeCTASection from "./HomeCTASection/HomeCTASection";
  
+ 
+ 
 
 const HomePage = () => {
   return (
@@ -20,7 +22,6 @@ const HomePage = () => {
       <HomeTestimonialsSection />
       <HomeFounderSection />
       <HomeCTASection />
- 
     </>
   );
 };

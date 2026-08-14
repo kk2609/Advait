@@ -71,7 +71,8 @@ import ContactPage from "../../Pages/ContactPage/ContactPage";
 import PrivacyPolicyPage from "../../Pages/PrivacyPolicyPage/PrivacyPolicyPage";
 import TermsConditionsPage from "../../Pages/TermsConditionsPage/TermsConditionsPage";
 import PageNotFound from "../../Pages/PageNotFound/PageNotFound";
-
+import Disclaimer from "../../Components/Disclaimer/Disclaimer";
+ 
 const WebSiteLayout = ({ children }) => (
   <div className="flex min-h-screen flex-col">
     <Header />
@@ -88,12 +89,15 @@ const RouteComponent = () => {
       <Routes>
         {/* --- Core Pages --- */}
         <Route path="/" element={<WebSiteLayout><HomePage /></WebSiteLayout>} />
+        <Route path="/disclaimer" element={<WebSiteLayout><Disclaimer /></WebSiteLayout>} />
         <Route path="/about" element={<WebSiteLayout><AboutPage /></WebSiteLayout>} />
         <Route path="/services" element={<WebSiteLayout><ServicesPage /></WebSiteLayout>} />
         <Route path="/services/:serviceSlug" element={<WebSiteLayout><ServiceDetailPage /></WebSiteLayout>} />
         <Route path="/contact" element={<WebSiteLayout><ContactPage /></WebSiteLayout>} />
         <Route path="/privacy-policy" element={<WebSiteLayout><PrivacyPolicyPage /></WebSiteLayout>} />
         <Route path="/terms-and-conditions" element={<WebSiteLayout><TermsConditionsPage /></WebSiteLayout>} />
+        
+
 
         {/* --- Fallback --- */}
         <Route path="*" element={<PageNotFound />} />
