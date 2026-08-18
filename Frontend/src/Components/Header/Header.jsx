@@ -6,9 +6,12 @@ import logo from "../../assets/logo.png";
 
 const services = [
   { label: "SIP Investment", path: "/services/sip-investment" },
+  { label: "Systematic Withdraw Plan", path: "/services/systematic-withdraw-plan" },
   { label: "Retirement Planning", path: "/services/retirement-planning" },
   { label: "Goal Planning", path: "/services/goal-planning" },
   { label: "Tax Planning", path: "/services/tax-planning" },
+  { label: "Wealth Creation", path: "/services/wealth-creation" },
+  { label: "Child Education Planning", path: "/services/child-education-planning" },
   { label: "Wealth Protection", path: "/services/wealth-protection" },
 ];
 
@@ -68,7 +71,7 @@ const Header = () => {
               Services
               <FaChevronDown className="text-xs transition-transform duration-200 group-hover:rotate-180" />
             </NavLink>
-            <div className="invisible absolute left-0 top-full w-56 translate-y-2 rounded-xl bg-white-color p-2 opacity-0 shadow-lg ring-1 ring-black-color/5 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="invisible absolute left-0 top-full w-60 translate-y-2 rounded-xl bg-white-color p-2 opacity-0 shadow-lg ring-1 ring-black-color/5 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
               {services.map((item) => (
                 <Link
                   key={item.path}

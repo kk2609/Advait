@@ -72,7 +72,8 @@ import PrivacyPolicyPage from "../../Pages/PrivacyPolicyPage/PrivacyPolicyPage";
 import TermsConditionsPage from "../../Pages/TermsConditionsPage/TermsConditionsPage";
 import PageNotFound from "../../Pages/PageNotFound/PageNotFound";
 import Disclaimer from "../../Components/Disclaimer/Disclaimer";
- 
+import Scrollpage from "../../Components/Scrollpage/Scrollpage";
+
 const WebSiteLayout = ({ children }) => (
   <div className="flex min-h-screen flex-col">
     <Header />
@@ -84,6 +85,7 @@ const WebSiteLayout = ({ children }) => (
 const RouteComponent = () => {
   return (
     <>
+      <Scrollpage />
       <ScrollToTop />
       <FloatingButtons />
       <Routes>

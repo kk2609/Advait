@@ -59,12 +59,80 @@
 
 
 
+// import React from "react";
+
+// const ContactHeroSection = () => {
+//   return (
+//     <section className="relative bg-secondary-color overflow-hidden">
+//       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-6 py-10  sm:py-12 lg:py-26">
+//         {/* Left: Text Content */}
+//         <div className="relative z-10 text-center lg:text-left">
+//           <span className="inline-block font-body-font text-primary-color font-semibold tracking-widest text-xs sm:text-sm uppercase mb-3">
+//             Get In Touch
+//           </span>
+
+//           <h1 className="font-heading-font text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] text-dark-color leading-snug mb-4">
+//             Let&apos;s Talk. Let&apos;s Plan.
+//             <br className="hidden sm:block" /> Let&apos;s Grow Together.
+//           </h1>
+
+//           <p className="font-body-font text-gray-color text-sm sm:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
+//             We&apos;re here to understand your goals and help you achieve
+//             them.
+//           </p>
+//         </div>
+
+//         {/* Right: Image */}
+//         <div className="relative flex justify-center lg:justify-end">
+//           {/* Decorative arc outline */}
+//           <span className="pointer-events-none hidden sm:block absolute  " />
+
+//           {/* Decorative dotted grid */}
+//           {/* <div className="pointer-events-none hidden sm:grid absolute -left-2 lg:left-0 bottom-2 grid-cols-6 gap-2 z-0">
+//             {Array.from({ length: 24 }).map((_, i) => (
+//               <span
+//                 key={i}
+//                 className="w-1.5 h-1.5 rounded-full bg-primary-color/70"
+//               />
+//             ))}
+//           </div> */}
+
+//           <div className="relative z-10 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-lg w-full max-w-md lg:max-w-none">
+//             <img
+//               src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=900&q=80"
+//               alt="Advait Financial Services meeting room"
+//               className="w-full h-56 sm:h-64 lg:h-72 xl:h-80 object-cover"
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ContactHeroSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
+import heroImage from "../../../assets/contact.jpg";    
 
 const ContactHeroSection = () => {
   return (
     <section className="relative bg-secondary-color overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-6 py-10  sm:py-12 lg:py-26">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-6 py-10 sm:py-12 lg:py-26">
         {/* Left: Text Content */}
         <div className="relative z-10 text-center lg:text-left">
           <span className="inline-block font-body-font text-primary-color font-semibold tracking-widest text-xs sm:text-sm uppercase mb-3">
@@ -77,29 +145,15 @@ const ContactHeroSection = () => {
           </h1>
 
           <p className="font-body-font text-gray-color text-sm sm:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
-            We&apos;re here to understand your goals and help you achieve
-            them.
+            We&apos;re here to understand your goals and help you achieve them.
           </p>
         </div>
 
         {/* Right: Image */}
         <div className="relative flex justify-center lg:justify-end">
-          {/* Decorative arc outline */}
-          <span className="pointer-events-none hidden sm:block absolute  " />
-
-          {/* Decorative dotted grid */}
-          {/* <div className="pointer-events-none hidden sm:grid absolute -left-2 lg:left-0 bottom-2 grid-cols-6 gap-2 z-0">
-            {Array.from({ length: 24 }).map((_, i) => (
-              <span
-                key={i}
-                className="w-1.5 h-1.5 rounded-full bg-primary-color/70"
-              />
-            ))}
-          </div> */}
-
           <div className="relative z-10 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-lg w-full max-w-md lg:max-w-none">
             <img
-              src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=900&q=80"
+              src={heroImage}   // 👈 use imported image
               alt="Advait Financial Services meeting room"
               className="w-full h-56 sm:h-64 lg:h-72 xl:h-80 object-cover"
             />
