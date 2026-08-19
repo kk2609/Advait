@@ -5,7 +5,7 @@ import {
   FaArrowRight,
   FaPhoneAlt,
 } from "react-icons/fa";
-import ctaImage from "../../../assets/foundersec.jpg"; // adjust path
+import ctaImage from "../../../assets/Foundersec.jpg"; // adjust path
 
 const CHECKLIST = [
   {
