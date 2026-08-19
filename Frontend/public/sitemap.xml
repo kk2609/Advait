@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- ==================== STATIC PAGES ==================== -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <!-- Home -->
     <url>
@@ -33,9 +29,6 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-
-    <!-- ==================== SERVICES — Dynamic: /services/:serviceSlug ==================== -->
 
     <!-- SIP Investment -->
     <url>
@@ -93,9 +86,6 @@
         <priority>0.7</priority>
     </url>
 
-
-    <!-- ==================== LEGAL PAGES ==================== -->
-
     <!-- Privacy Policy -->
     <url>
         <loc>https://www.advaitfinance.com/privacy-policy</loc>
@@ -111,4 +101,4 @@
     </url>
 
 </urlset>
-```
+ 
