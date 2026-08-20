@@ -93,7 +93,7 @@ const contactDetails = [
   {
     icon: FiPhone,
     label: "Phone",
-    lines: ["+91 98765 43210"],
+    lines: ["+91 92654 74210"],
   },
   {
     icon: FiMail,
@@ -160,7 +160,7 @@ const ContactInfoSection = () => {
               referrerPolicy="no-referrer-when-downgrade"
             />
 
-            <div className="absolute bottom-3 left-3 bg-white rounded-xl shadow-md px-3.5 py-2.5 flex items-center gap-2.5 max-w-[85%]">
+            {/* <div className="absolute bottom-3 left-3 bg-white rounded-xl shadow-md px-3.5 py-2.5 flex items-center gap-2.5 max-w-[85%]">
               <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center">
                 <FiMapPin size={16} />
               </span>
@@ -172,7 +172,7 @@ const ContactInfoSection = () => {
                   123, Financial District, Ahmedabad
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

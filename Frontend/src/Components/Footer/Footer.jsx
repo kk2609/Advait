@@ -723,13 +723,13 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 border-t border-white-color/10 pt-6">
           {/* Disclaimer – CENTERED */}
-          <div className="flex items-center justify-center gap-3">
+          {/* <div className="flex items-center justify-center gap-3">
             <FaShieldAlt className="shrink-0 text-xl text-primary-color sm:text-2xl" />
             <p className="font-body-font text-xs leading-relaxed text-white-color/70 sm:text-sm text-center max-w-3xl">
               Mutual Fund investments are subject to market risks, read all
               scheme related documents carefully before investing.
             </p>
-          </div>
+          </div> */}
 
           {/* Copyright + legal links – LEFT & RIGHT (as before) */}
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
