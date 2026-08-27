@@ -705,7 +705,7 @@ const Footer = () => {
                   href="mailto:info@advait.com"
                   className="font-body-font text-sm text-white-color/80 hover:text-primary-color break-all"
                 >
-                  info@advait.com
+                  advaitfinserv@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -753,7 +753,10 @@ const Footer = () => {
               </Link>
               <span className="text-white-color/30">|</span>
               <span className="text-white-color/70">
-                Design &amp; Developed By Krish Koshti
+                Design &amp; Developed By 
+              </span>
+               <span className="text-zinc-color">
+                Krish Koshti
               </span>
             </div>
           </div>

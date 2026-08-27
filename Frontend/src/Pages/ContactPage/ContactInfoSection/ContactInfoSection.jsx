@@ -98,7 +98,7 @@ const contactDetails = [
   {
     icon: FiMail,
     label: "Email",
-    lines: ["hello@advaitfs.com"],
+    lines: ["advaitfinserv@gmail.com"],
   },
   {
     icon: FiClock,

@@ -233,6 +233,304 @@
 
 
 
+// import React, { useState, useEffect } from "react";
+// import { Link, NavLink } from "react-router-dom";
+// import { FaChevronDown, FaShieldAlt } from "react-icons/fa";
+// import { HiMenuAlt3, HiX } from "react-icons/hi";
+// import logo from "../../assets/logo.png";
+
+// const services = [
+//   { label: "SIP Investment", path: "/services/sip-investment" },
+//   { label: "Systematic Withdraw Plan", path: "/services/systematic-withdraw-plan" },
+//   { label: "Retirement Planning", path: "/services/retirement-planning" },
+//   { label: "Goal Planning", path: "/services/goal-planning" },
+//   { label: "Tax Planning", path: "/services/tax-planning" },
+//   { label: "Wealth Creation", path: "/services/wealth-creation" },
+//   { label: "Child Education Planning", path: "/services/child-education-planning" },
+//   { label: "Wealth Protection", path: "/services/wealth-protection" },
+// ];
+
+// const disclaimerText = "Mutual Fund investments are subject to market risks, read all scheme related documents carefully before investing.";
+
+// const Header = () => {
+//   const [mobileOpen, setMobileOpen] = useState(false);
+//   const [mobileDropdown, setMobileDropdown] = useState(null);
+//   const [disclaimerOpen, setDisclaimerOpen] = useState(true);
+//   const [displayedText, setDisplayedText] = useState("");
+
+//   const toggleMobileDropdown = (key) => {
+//     setMobileDropdown((prev) => (prev === key ? null : key));
+//   };
+
+//   useEffect(() => {
+//     if (!disclaimerOpen) return;
+    
+//     let index = 0;
+//     const interval = setInterval(() => {
+//       if (index < disclaimerText.length) {
+//         setDisplayedText(disclaimerText.slice(0, index + 1));
+//         index++;
+//       } else {
+//         clearInterval(interval);
+//       }
+//     }, 50);
+
+//     return () => clearInterval(interval);
+//   }, [disclaimerOpen]);
+
+//   const navLinkClass = ({ isActive }) =>
+//     `relative font-body-font text-sm font-medium transition-colors duration-200 ${
+//       isActive
+//         ? "text-primary-color after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-primary-color"
+//         : "text-dark-color hover:text-primary-color"
+//     }`;
+
+//   return (
+//     <>
+//       {/* Disclaimer Top Bar */}
+//       {disclaimerOpen && (
+//         <div className="w-full bg-dark-color">
+//           <div className="mx-auto flex max-w-auto items-center justify-between gap-2 sm:gap-1 px-4 py-1.5 sm:px-6 lg:px-10 xl:px-16">
+//             {/* Left side: Icon and Label */}
+//             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+//               <FaShieldAlt className="shrink-0 text-xl text-primary-color sm:text-2xl" />
+//               <span className="hidden sm:inline font-body-font text-xs sm:text-xs font-semibold text-white whitespace-nowrap">
+//                 {/* Mutual Fund Disclaimer: */}
+//               </span>
+//             </div>
+
+//             {/* Middle: Disclaimer Text with Typewriter Animation */}
+//             <div className="flex-1 overflow-hidden">
+//               <p className="font-body-font text-xs sm:text-sm text-white whitespace-nowrap sm:whitespace-normal min-h-[1.2em]">
+//                 {displayedText}
+//                 {displayedText.length < disclaimerText.length && (
+//                   <span className="inline-block animate-pulse">|</span>
+//                 )}
+//               </p>
+//             </div>
+
+//             {/* Right side: Link and Close Button */}
+//             <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+//               {/* <Link
+//                 to="#"
+//                 className="hidden sm:inline font-body-font text-xs sm:text-sm text-white font-semibold underline hover:opacity-80 transition-opacity duration-200 whitespace-nowrap"
+//               >
+//                 Read Disclaimer
+//               </Link> */}
+//               {/* <div className="hidden sm:block w-px h-4 bg-white/30"></div> */}
+//               <button
+//                 onClick={() => setDisclaimerOpen(false)}
+//                 className="flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-200 p-1"
+//                 aria-label="Close disclaimer"
+//               >
+//                 <HiX className="text-lg" />
+//               </button>
+//             </div>
+ 
+//             {/* Mobile: Compact layout */}
+//             <div className="sm:hidden flex items-center gap-2">
+//               {/* <button
+//                 onClick={() => setDisclaimerOpen(false)}
+//                 className="flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-200"
+//                 aria-label="Close disclaimer"
+//               >
+//                 <HiX className="text-lg" />
+//               </button> */}
+//             </div>
+//           </div>
+//         </div>
+//       )}
+
+//       {/* Main Header */}
+//       <header className="sticky top-0 z-50 w-full bg-white-color/95 backdrop-blur-sm">
+//         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10 xl:px-16">
+//           {/* Logo */}
+//           <Link to="/" className="flex items-center gap-3">
+//             <img
+//               src={logo}
+//               alt="Advait Financial Services"
+//               className="h-10 w-auto object-contain"
+//             />
+//             <span className="flex flex-col leading-tight">
+//               <span className="font-heading-font text-xl font-semibold text-dark-color">
+//                 Advait
+//               </span>
+//               <span className="text-[11px] tracking-wide text-gray-color">
+//                 Financial Services
+//               </span>
+//             </span>
+//           </Link>
+
+//           {/* Desktop Navigation */}
+//           <nav className="hidden items-align-center gap-8 lg:flex">
+//             <NavLink to="/" end className={navLinkClass}>
+//               Home
+//             </NavLink>
+//             <NavLink to="/about" className={navLinkClass}>
+//               About Us
+//             </NavLink>
+
+//             {/* Services dropdown – now a NavLink */}
+//             <div className="group relative">
+//               <NavLink
+//                 to="/services"
+//                 end
+//                 className={({ isActive }) =>
+//                   `flex items-center gap-1 ${navLinkClass({ isActive })}`
+//                 }
+//               >
+//                 Services
+//                 <FaChevronDown className="text-xs transition-transform duration-200 group-hover:rotate-180" />
+//               </NavLink>
+//               <div className="invisible absolute left-0 top-full w-60 translate-y-2 rounded-xl bg-white-color p-2 opacity-0 shadow-lg ring-1 ring-black-color/5 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+//                 {services.map((item) => (
+//                   <Link
+//                     key={item.path}
+//                     to={item.path}
+//                     className="block rounded-lg px-3 py-2 font-body-font text-sm text-dark-color hover:bg-secondary-color hover:text-primary-color"
+//                   >
+//                     {item.label}
+//                   </Link>
+//                 ))}
+//               </div>
+//             </div>
+
+//             <NavLink to="/contact" className={navLinkClass}>
+//               Contact Us
+//             </NavLink>
+//           </nav>
+
+//           {/* Right side: CTA + Mobile toggle */}
+//           <div className="flex items-center gap-3">
+//             <Link
+//               to="/contact"
+//               className="hidden rounded-xl bg-primary-color px-6 py-2.5 font-body-font text-sm font-semibold text-white-color shadow-sm transition-colors duration-200 hover:bg-primary-color/90 lg:inline-block"
+//             >
+//               Book a Consultation
+//             </Link>
+
+//             <button
+//               onClick={() => setMobileOpen((prev) => !prev)}
+//               className="flex h-10 w-10 items-center justify-center rounded-full text-2xl text-dark-color lg:hidden"
+//               aria-label="Toggle menu"
+//             >
+//               {mobileOpen ? <HiX /> : <HiMenuAlt3 />}
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Mobile Navigation */}
+//         <div
+//           className={`overflow-hidden bg-white-color transition-all duration-300 lg:hidden ${
+//             mobileOpen ? "max-h-[520px] border-t border-black-color/5" : "max-h-0"
+//           }`}
+//         >
+//           <nav className="flex flex-col gap-1 px-4 py-4">
+//             <NavLink
+//               to="/"
+//               end
+//               onClick={() => setMobileOpen(false)}
+//               className={({ isActive }) =>
+//                 `rounded-lg px-3 py-2 font-body-font text-sm font-medium ${
+//                   isActive
+//                     ? "bg-secondary-color text-primary-color"
+//                     : "text-dark-color"
+//                 }`
+//               }
+//             >
+//               Home
+//             </NavLink>
+
+//             <NavLink
+//               to="/about"
+//               onClick={() => setMobileOpen(false)}
+//               className={({ isActive }) =>
+//                 `rounded-lg px-3 py-2 font-body-font text-sm font-medium ${
+//                   isActive
+//                     ? "bg-secondary-color text-primary-color"
+//                     : "text-dark-color"
+//                 }`
+//               }
+//             >
+//               About Us
+//             </NavLink>
+
+//             {/* Mobile Services: link + separate toggle */}
+//             <div className="flex items-center justify-between rounded-lg px-3 py-2">
+//               <NavLink
+//                 to="/services"
+//                 end
+//                 onClick={() => setMobileOpen(false)}
+//                 className={({ isActive }) =>
+//                   `font-body-font text-sm font-medium ${
+//                     isActive
+//                       ? "text-primary-color"
+//                       : "text-dark-color"
+//                   }`
+//                 }
+//               >
+//                 Services
+//               </NavLink>
+//               <button
+//                 onClick={() => toggleMobileDropdown("services")}
+//                 className="p-1"
+//                 aria-label="Toggle services submenu"
+//               >
+//                 <FaChevronDown
+//                   className={`text-xs transition-transform duration-200 ${
+//                     mobileDropdown === "services" ? "rotate-180" : ""
+//                   }`}
+//                 />
+//               </button>
+//             </div>
+//             <div
+//               className={`overflow-hidden pl-3 transition-all duration-200 ${
+//                 mobileDropdown === "services" ? "max-h-96" : "max-h-0"
+//               }`}
+//             >
+//               {services.map((item) => (
+//                 <Link
+//                   key={item.path}
+//                   to={item.path}
+//                   onClick={() => setMobileOpen(false)}
+//                   className="block rounded-lg px-3 py-2 font-body-font text-sm text-gray-color hover:text-primary-color"
+//                 >
+//                   {item.label}
+//                 </Link>
+//               ))}
+//             </div>
+
+//             <NavLink
+//               to="/contact"
+//               onClick={() => setMobileOpen(false)}
+//               className={({ isActive }) =>
+//                 `rounded-lg px-3 py-2 font-body-font text-sm font-medium ${
+//                   isActive
+//                     ? "bg-secondary-color text-primary-color"
+//                     : "text-dark-color"
+//                 }`
+//               }
+//             >
+//               Contact Us
+//             </NavLink>
+
+//             <Link
+//               to="/contact"
+//               onClick={() => setMobileOpen(false)}
+//               className="mt-2 rounded-full bg-primary-color px-6 py-2.5 text-center font-body-font text-sm font-semibold text-white-color"
+//             >
+//               Book a Consultation
+//             </Link>
+//           </nav>
+//         </div>
+//       </header>
+//     </>
+//   );
+// };
+
+// export default Header;
+
+
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaChevronDown, FaShieldAlt } from "react-icons/fa";
@@ -250,7 +548,26 @@ const services = [
   { label: "Wealth Protection", path: "/services/wealth-protection" },
 ];
 
-const disclaimerText = "Mutual Fund investments are subject to market risks, read all scheme related documents carefully before investing.";
+const disclaimerText =
+  "Mutual Fund investments are subject to market risks, read all scheme related documents carefully before investing.";
+const shortDisclaimer = "Mutual Fund investments are subject to market risks";
+
+// Custom hook to detect screen size
+const useMediaQuery = (query) => {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [matches, query]);
+
+  return matches;
+};
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -258,25 +575,31 @@ const Header = () => {
   const [disclaimerOpen, setDisclaimerOpen] = useState(true);
   const [displayedText, setDisplayedText] = useState("");
 
+  const isSmallScreen = useMediaQuery("(max-width: 639px)"); // matches Tailwind's 'sm' breakpoint
+  const targetText = isSmallScreen ? shortDisclaimer : disclaimerText;
+
   const toggleMobileDropdown = (key) => {
     setMobileDropdown((prev) => (prev === key ? null : key));
   };
 
+  // Typewriter effect – runs on both mobile and desktop
   useEffect(() => {
     if (!disclaimerOpen) return;
-    
+
     let index = 0;
+    setDisplayedText(""); // reset when target text changes
+
     const interval = setInterval(() => {
-      if (index < disclaimerText.length) {
-        setDisplayedText(disclaimerText.slice(0, index + 1));
+      if (index < targetText.length) {
+        setDisplayedText(targetText.slice(0, index + 1));
         index++;
       } else {
         clearInterval(interval);
       }
-    }, 50);
+    }, 40);
 
     return () => clearInterval(interval);
-  }, [disclaimerOpen]);
+  }, [disclaimerOpen, targetText]); // re-run if screen crosses the breakpoint
 
   const navLinkClass = ({ isActive }) =>
     `relative font-body-font text-sm font-medium transition-colors duration-200 ${
@@ -290,53 +613,28 @@ const Header = () => {
       {/* Disclaimer Top Bar */}
       {disclaimerOpen && (
         <div className="w-full bg-dark-color">
-          <div className="mx-auto flex max-w-auto items-center justify-between gap-2 sm:gap-4 px-4 py-2.5 sm:px-6 lg:px-10 xl:px-16">
-            {/* Left side: Icon and Label */}
-            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              <FaShieldAlt className="shrink-0 text-xl text-primary-color sm:text-2xl" />
-              <span className="hidden sm:inline font-body-font text-xs sm:text-sm font-semibold text-white whitespace-nowrap">
-                {/* Mutual Fund Disclaimer: */}
+          <div className="mx-auto flex max-w-[1600px] items-center gap-2 px-4 py-2 sm:px-6 lg:px-10 xl:px-16">
+            {/* Icon */}
+            <FaShieldAlt className="shrink-0 text-xl text-primary-color sm:text-2xl" />
+
+            {/* Typewriter text – visible on all screens, content adapts */}
+            <div className="flex-1 min-w-0">
+              <span className="font-body-font text-xs sm:text-sm text-white break-words">
+                {displayedText}
+                {displayedText.length < targetText.length && (
+                  <span className="inline-block animate-pulse">|</span>
+                )}
               </span>
             </div>
 
-            {/* Middle: Disclaimer Text with Typewriter Animation */}
-            <div className="flex-1 overflow-hidden">
-              <p className="font-body-font text-xs sm:text-sm text-white whitespace-nowrap sm:whitespace-normal min-h-[1.2em]">
-                {displayedText}
-                {displayedText.length < disclaimerText.length && (
-                  <span className="inline-block animate-pulse">|</span>
-                )}
-              </p>
-            </div>
-
-            {/* Right side: Link and Close Button */}
-            <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-              {/* <Link
-                to="#"
-                className="hidden sm:inline font-body-font text-xs sm:text-sm text-white font-semibold underline hover:opacity-80 transition-opacity duration-200 whitespace-nowrap"
-              >
-                Read Disclaimer
-              </Link> */}
-              {/* <div className="hidden sm:block w-px h-4 bg-white/30"></div> */}
-              <button
-                onClick={() => setDisclaimerOpen(false)}
-                className="flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-200 p-1"
-                aria-label="Close disclaimer"
-              >
-                <HiX className="text-lg" />
-              </button>
-            </div>
-
-            {/* Mobile: Compact layout */}
-            <div className="sm:hidden flex items-center gap-2">
-              <button
-                onClick={() => setDisclaimerOpen(false)}
-                className="flex items-center justify-center text-white hover:opacity-80 transition-opacity duration-200"
-                aria-label="Close disclaimer"
-              >
-                <HiX className="text-lg" />
-              </button>
-            </div>
+            {/* Single close button */}
+            <button
+              onClick={() => setDisclaimerOpen(false)}
+              className="flex shrink-0 items-center justify-center text-white transition-opacity hover:opacity-80 p-1"
+              aria-label="Close disclaimer"
+            >
+              <HiX className="text-lg" />
+            </button>
           </div>
         </div>
       )}
@@ -345,7 +643,7 @@ const Header = () => {
       <header className="sticky top-0 z-50 w-full bg-white-color/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10 xl:px-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src={logo}
               alt="Advait Financial Services"
@@ -362,7 +660,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-align-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-8 lg:flex">
             <NavLink to="/" end className={navLinkClass}>
               Home
             </NavLink>
@@ -370,7 +668,7 @@ const Header = () => {
               About Us
             </NavLink>
 
-            {/* Services dropdown – now a NavLink */}
+            {/* Services dropdown */}
             <div className="group relative">
               <NavLink
                 to="/services"
@@ -401,10 +699,10 @@ const Header = () => {
           </nav>
 
           {/* Right side: CTA + Mobile toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <Link
               to="/contact"
-              className="hidden rounded-xl bg-primary-color px-6 py-2.5 font-body-font text-sm font-semibold text-white-color shadow-sm transition-colors duration-200 hover:bg-primary-color/90 lg:inline-block"
+              className="hidden rounded-xl bg-primary-color px-6 py-2.5 font-body-font text-sm font-semibold text-white-color shadow-sm transition-colors hover:bg-primary-color/90 lg:inline-block"
             >
               Book a Consultation
             </Link>
@@ -422,7 +720,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         <div
           className={`overflow-hidden bg-white-color transition-all duration-300 lg:hidden ${
-            mobileOpen ? "max-h-[520px] border-t border-black-color/5" : "max-h-0"
+            mobileOpen ? "max-h-[600px] border-t border-black-color/5" : "max-h-0"
           }`}
         >
           <nav className="flex flex-col gap-1 px-4 py-4">
@@ -455,7 +753,7 @@ const Header = () => {
               About Us
             </NavLink>
 
-            {/* Mobile Services: link + separate toggle */}
+            {/* Mobile Services: link + toggle */}
             <div className="flex items-center justify-between rounded-lg px-3 py-2">
               <NavLink
                 to="/services"
@@ -463,9 +761,7 @@ const Header = () => {
                 onClick={() => setMobileOpen(false)}
                 className={({ isActive }) =>
                   `font-body-font text-sm font-medium ${
-                    isActive
-                      ? "text-primary-color"
-                      : "text-dark-color"
+                    isActive ? "text-primary-color" : "text-dark-color"
                   }`
                 }
               >
