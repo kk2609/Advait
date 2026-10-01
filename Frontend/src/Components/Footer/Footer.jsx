@@ -753,11 +753,16 @@ const Footer = () => {
               </Link>
               <span className="text-white-color/30">|</span>
               <span className="text-white-color/70">
-                Design &amp; Developed By 
+                Design &amp; Developed By
               </span>
-               <span className="text-zinc-color">
+              <a
+                href="https://krishkoshti-dev.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-color transition-colors duration-200 hover:text-primary-color"
+              >
                 Krish Koshti
-              </span>
+              </a>
             </div>
           </div>
         </div>
